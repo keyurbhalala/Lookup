@@ -65,7 +65,7 @@ else:
                     filtered['product description'].str.contains(selected_strength, case=False, na=False) |
                     filtered['sku name'].str.contains(selected_strength, case=False, na=False)
                 ]
-
+            filtered = filtered.drop_duplicates(subset=['product code', 'sku name'])
             if not filtered.empty:
                 st.success(f"✅ Found {len(filtered)} matching product(s)")
 
