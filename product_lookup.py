@@ -80,7 +80,6 @@ else:
                     col1.markdown(f"`{row['Product Code']}`")
                     col2.markdown(row['Old Description'])
                     col3.text_area("New Description", row['New Description'] if pd.notna(row['New Description']) else "❌ Not Found", height=70, key=i)
-                    col4.button("📋 Copy", key=f"copy_{i}", help="Click and press Ctrl+C manually.")
 
                 # Excel download
                 output = io.BytesIO()
