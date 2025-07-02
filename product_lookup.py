@@ -6,13 +6,6 @@ import io
 st.set_page_config(page_title="🔁 Product Description Finder", layout="wide")
 st.title("🔍 Old ➡ New Product Description Finder")
 
-st.markdown("""
-✅ Place these two files in the same folder as this script:
-- `old_products.xlsx` or `.csv` → must contain `Product Code`, `Product Description`
-- `new_products.xlsx` or `.csv` → must contain `SKU`, `SKU Name`
----
-""")
-
 # Load file helper
 def load_file(name_base):
     for ext in ['.xlsx', '.csv']:
